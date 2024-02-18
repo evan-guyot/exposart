@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import type { Masterpiece } from "./masterpiece";
+import { Masterpiece } from "../../types/masterpiece";
 import { masterpieces } from "./mockedMasterpieces";
 
 import "server-only";
