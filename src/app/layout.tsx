@@ -18,18 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <CartProvider>
-      <html lang="en">
+      <html lang="en" style={{ minWidth: "100%", minHeight: "100%" }}>
         <body
           className={inter.className}
           style={{
-            minWidth: "97vw",
-            minHeight: "97.5vh",
             margin: 0,
             padding: 0,
           }}
         >
           <Header />
-          <main>{children}</main>
+          <main className="mt-24">{children}</main>
         </body>
       </html>
     </CartProvider>

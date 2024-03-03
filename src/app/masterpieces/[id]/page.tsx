@@ -5,9 +5,9 @@ export default async function Page({ params }: { params: { id: string } }) {
   const masterpiece = await getMasterpiece(params.id);
 
   return (
-    <div className="relative flex flex-col mt-6 text-white bg-gray-800 shadow-md bg-clip-border rounded-xl w-96 m-auto">
+    <div className="relative flex flex-col mt-36 text-black bg-gray-200 dark:text-white dark:bg-gray-800 shadow-md bg-clip-border rounded-xl w-96 m-auto">
       <div
-        className="cs-masonry-image relative h-96 mt-6 mx-4 overflow-hidden shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40"
+        className="cs-masonry-image relative h-96 mt-6 mx-4 overflow-hidden shadow-lg bg-clip-border rounded-xl shadow-blue-gray-500/40"
         style={{
           backgroundImage: `url(${masterpiece.url})`,
         }}
@@ -25,16 +25,13 @@ export default async function Page({ params }: { params: { id: string } }) {
       </div>
       <div className="p-6 pt-0 flex flex-row justify-evenly">
         <CartAddButton
-          className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-black text-white shadow-md hover:bg-gray-950 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none cursor-pointer"
+          className="cursor-pointer text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
           label="Add to Cart"
           masterpiece={masterpiece}
         />
-        <button
-          className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-black text-white shadow-md hover:bg-gray-950 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none cursor-pointer"
-          type="button"
-        >
+        <a className="cursor-pointer text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
           Copy Link
-        </button>
+        </a>
       </div>
     </div>
   );
