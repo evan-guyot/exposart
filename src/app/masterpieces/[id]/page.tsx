@@ -5,7 +5,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   const masterpiece = await getMasterpiece(params.id);
 
   return (
-    <div className="relative flex flex-col mt-36 text-black bg-gray-200 dark:text-white dark:bg-gray-800 shadow-md bg-clip-border rounded-xl w-96 m-auto">
+    <div className="m-auto flex flex-col text-black bg-gray-200 dark:text-white dark:bg-gray-800 shadow-md bg-clip-border rounded-xl w-96 ">
       <div
         className="cs-masonry-image relative h-96 mt-6 mx-4 overflow-hidden shadow-lg bg-clip-border rounded-xl shadow-blue-gray-500/40"
         style={{

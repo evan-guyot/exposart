@@ -22,12 +22,13 @@ export default function RootLayout({
         <body
           className={inter.className}
           style={{
+            top: 0,
             margin: 0,
             padding: 0,
           }}
         >
           <Header />
-          <main className="mt-24">{children}</main>
+          <main className="pt-24 min-h-screen flex">{children}</main>
         </body>
       </html>
     </CartProvider>
